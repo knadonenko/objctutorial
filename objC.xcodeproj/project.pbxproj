@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAC4A4BC2651161F00AD46AC /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC4A4BB2651161F00AD46AC /* Student.m */; };
 		BAD842D1262E02F5003C0FAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD842D0262E02F5003C0FAB /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BAC4A4BA2651161F00AD46AC /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		BAC4A4BB2651161F00AD46AC /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		BAD842CD262E02F5003C0FAB /* objC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = objC; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD842D0262E02F5003C0FAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,9 +41,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAC4A4B426510FA600AD46AC /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				BAC4A4BA2651161F00AD46AC /* Student.h */,
+				BAC4A4BB2651161F00AD46AC /* Student.m */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
 		BAD842C4262E02F5003C0FAB = {
 			isa = PBXGroup;
 			children = (
+				BAC4A4B426510FA600AD46AC /* Student */,
 				BAD842CF262E02F5003C0FAB /* objC */,
 				BAD842CE262E02F5003C0FAB /* Products */,
 			);
@@ -92,6 +105,7 @@
 				TargetAttributes = {
 					BAD842CC262E02F5003C0FAB = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -119,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD842D1262E02F5003C0FAB /* main.m in Sources */,
+				BAC4A4BC2651161F00AD46AC /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,20 +254,37 @@
 		BAD842D5262E02F5003C0FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB66U8JA8X;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Student/objC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		BAD842D6262E02F5003C0FAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB66U8JA8X;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Student/objC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Student.h"
 
 double calculateNums(int operationNum, float a, float b ) {
     
@@ -41,27 +42,37 @@ void checkSymbol(char character) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        float a = 0;
-        float b = 0;
-        int operation = 1;
+//        float a = 0;
+//        float b = 0;
+//        int operation = 1;
+//
+//        NSLog(@"Введите операцию");
+//        NSLog(@"1 - сложение");
+//        NSLog(@"2 - вычитание");
+//        NSLog(@"3 - умножение");
+//        NSLog(@"4 - деление");
+//        scanf("%d", &operation);
+//
+//        NSLog(@"Введите число a");
+//        scanf("%f", &a);
+//        NSLog(@"Введите число b");
+//        scanf("%f", &b);
+//
+//        float result = calculateNums(operation, a, b);
+//
+//        NSLog(@"Результат вычислений: %.f", result);
+//
+//        checkSymbol('A');
         
-        NSLog(@"Введите операцию");
-        NSLog(@"1 - сложение");
-        NSLog(@"2 - вычитание");
-        NSLog(@"3 - умножение");
-        NSLog(@"4 - деление");
-        scanf("%d", &operation);
-        
-        NSLog(@"Введите число a");
-        scanf("%f", &a);
-        NSLog(@"Введите число b");
-        scanf("%f", &b);
-        
-        float result = calculateNums(operation, a, b);
-        
-        NSLog(@"Результат вычислений: %.f", result);
-        
-        checkSymbol('A');
+        Student *student = [[Student alloc] initName: @"Ivan" initLastName: @"Ivanov" initAge: 20];
+
+        NSLog(@"%ld", student.age);
+        [student print];
+        student.name = @"Petr";
+        student.lastName = @"Petrov";
+        [student print];
+        [student increaseAge];
+        [student print];
         
     }
     return 0;
